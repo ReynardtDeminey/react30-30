@@ -7,8 +7,5 @@ author: Reynardt Deminey
 ---
 Hello World!
 
-\`\`\`
-
-<div>Hello World</div>
-
-\`\`\`
+    <div>"Hello World"</div>
+    <p>This is a code block</div>
