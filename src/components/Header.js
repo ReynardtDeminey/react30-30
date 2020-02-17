@@ -14,7 +14,7 @@ export default function Header(props) {
         aria-label="main navigation"
       >
         <Link to="/">
-          <h1>{props.title}</h1>
+          <h1>React30-30</h1>
         </Link>
         <div>
           <h1>
