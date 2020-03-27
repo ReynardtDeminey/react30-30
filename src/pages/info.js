@@ -15,7 +15,7 @@ export default function Info() {
         <ul>
           <li>
             <p>
-              <a href="mailto:demineydev@outlook.com">Email: demineydev@outlook.com</a>
+              <a href="mailto:info@reynardtdeminey.me">Email: info@reynardtdeminey.me</a>
             </p>
           </li>
           <li>
