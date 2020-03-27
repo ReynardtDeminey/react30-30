@@ -18,18 +18,7 @@ export default function Info() {
               <a href="mailto:midstreamlearntocode@gmail.com">Email: midstreamlearntocode@gmail.com</a>
             </p>
           </li>
-          <li>
-            <p>
-              <a href="https://twitter.com/ReynardtDeminey">
-                Twitter: @ReynardtDeminey
-              </a>
-            </p>
-          </li>
-          <li>
-            <p>
-              <a href="https://github.com/ReynardtDeminey">Github: ReynardtDeminey</a>
-            </p>
-          </li>
+          
         </ul>
       </section>
     </Layout>
