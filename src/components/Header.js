@@ -14,7 +14,7 @@ export default function Header(props) {
         aria-label="main navigation"
       >
         <Link to="/">
-          <h1>Midstream Learn To Code</h1>
+          <h1>Learn To Code</h1>
           {/* <p>30 projects in 30 days</p> */}
         </Link>
         <div>
