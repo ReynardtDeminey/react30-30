@@ -187,7 +187,7 @@ Now we should get the logo. In the **h1** tag, just before the word **Spotify**,
 
     <i class="fa fa-spotify" aria-hidden="true"></i>
 
-Your code between the **body** tags should now look like this:
+This link is a link I copied from the FontAwesome Site, wehre you use fonts to display logos in your site. You can have a look at the site to see what logos there are. Your code between the **body** tags should now look like this:
 
     <body>
         <div>
@@ -207,3 +207,66 @@ Your code between the **body** tags should now look like this:
     </body>
 
 If you save and refresh now, you'll see the Spotify logo in your heading like this:
+
+![](/content/images/Screenshot from 2020-03-28 15-58-00.png)
+
+Now in the **i** tag that we pasted give it an **id** of **logo** and the **h1** an **id** of **heading**, like this:
+
+    <body>
+        <div>
+            <div id="container">
+                <h1 id="heading"><i id="logo" class="fa fa-spotify" aria-hidden="true"></i> Spotify</h1>
+                <p><span>Sign In</span><span>Sign Up</span></p>
+                <form>
+                    <input type="text"><br>
+                    <input type="text"><br> 
+                    <label><input type="checkbox" name="checkbox" id="checkbox">stay signed in</label>
+                </form>
+                <button>SIGN IN</button>
+                <p>Forgot Password?</p>
+            </div>
+        </div>
+            
+    </body>
+
+Once done we can go the the css file and style our heading. Firstly, we need some space above the heading, so we add this line to the styling of our container.
+
+    #container {
+        width: 30%;
+        margin: auto;
+        background-color: rgb(46,47,51);
+        text-align: center;
+        padding-top: 50px; /* Add this */
+    }
+
+Remember padding is the space inside an element and margin is the space outside an element. To style our heading the add the following code under our container styling:
+
+    #heading {
+        font-size: 35px;
+        color: white;
+        margin-bottom: 50px;
+    }
+
+Here we set the font size with the **font-size** property, the color of the font with the **color** property and the space under the heading with the **margin-bottom** property. 
+
+Your heading should now look like this:
+
+![](/content/images/Screenshot from 2020-03-28 16-20-54.png)
+
+Now to the paragraph below the heading. Yesterday I mentioned that we will make this two separate elements in order to position and style them. I suggest for both of them we assign a **class** of **subheading**.
+
+    <p><span class="subheading">Sign In</span><span class="subheading">Sign Up</span></p>
+
+To style the **subheading**, we select it using the subheading selector with a full stop as I mentioned above.
+
+     .subheading {
+        font-size: 20px;
+        color: white;
+        margin: 20px;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+See if you can guess what all the properties do in respect of the styling.
+
+Firstly, the **font-size** property adjusts the size of the font and the **color** property changes the colour of the font. The **margin** property adjusts the space between the respective spans. The **text-transform** makes the text uppercase and the **font-weight** makes the text bold.
