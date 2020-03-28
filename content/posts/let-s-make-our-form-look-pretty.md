@@ -229,7 +229,7 @@ Now in the **i** tag that we pasted give it an **id** of **logo** and the **h1**
             
     </body>
 
-Once done we can go the the css file and style our heading. Firstly, we need some space above the heading, so we add this line to the styling of our container.
+Once done we can go the the css file and style our heading. Firstly, we need some space above the heading, so we add this line to the styling of our container. We also add a line to add space at the bottom of the container.
 
     #container {
         width: 30%;
@@ -237,6 +237,7 @@ Once done we can go the the css file and style our heading. Firstly, we need som
         background-color: rgb(46,47,51);
         text-align: center;
         padding-top: 50px; /* Add this */
+        padding-bottom: 50px; /* Add this */
     }
 
 Remember padding is the space inside an element and margin is the space outside an element. To style our heading the add the following code under our container styling:
@@ -269,4 +270,127 @@ To style the **subheading**, we select it using the subheading selector with a f
 
 See if you can guess what all the properties do in respect of the styling.
 
-Firstly, the **font-size** property adjusts the size of the font and the **color** property changes the colour of the font. The **margin** property adjusts the space between the respective spans. The **text-transform** makes the text uppercase and the **font-weight** makes the text bold.
+Firstly, the **font-size** property adjusts the size of the font and the **color** property changes the colour of the font. The **margin** property adjusts the space between the respective spans. The **text-transform** makes the text uppercase and the **font-weight** makes the text bold. Your Sign In and Sign Up text should now look like this.
+
+![](/content/images/Screenshot from 2020-03-28 16-40-19.png)
+
+Now we move on to the form. For the form we will be using a class and an id for the form and the inputs. For the each of the text inputs we give a **class** of **form-text-input**, for the checkbox and it's label a **class** of **form-checkbox-input** and for the form itself we give an **id** of **login-form**.
+
+    <body>
+        <div>
+            <div id="container">
+                <h1 id="heading"><i id="logo" class="fa fa-spotify logo" aria-hidden="true"></i> Spotify</h1>
+                <p><span class="subheading">Sign In</span><span class="subheading">Sign Up</span></p>
+                <form id="login-form">
+                    <input class="form-text-input" type="text"><br>
+                    <input class="form-text-input" type="text"><br> 
+                    <label class="form-checkbox-input"><input class="form-checkbox-input" type="checkbox" name="checkbox" id="checkbox">stay signed in</label>
+                </form>
+                <button>SIGN IN</button>
+                <p>Forgot Password?</p>
+            </div>
+        </div>
+            
+    </body>
+
+To style the form we type the following code into our **style.css** file.
+
+    #login-form {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+This merely adjusts the space on top and on the bottom of the form.
+
+To style the text inputs we type the following code in our **style.css** file.
+
+    .form-text-input {
+        width: 75%;
+        margin: 12px;
+        height: 45px;
+        font-size: 20px;
+        border-radius: 50px;
+        border: none;
+    }
+
+Before you read what each property does, try to guess what each one does. 
+
+The **width** property sets the width of the text box. The **margin** property increases the space between the two text boxes. The **height** property sets the height of the box. **Font-size** determines the font-size of the font in the box. The **border-radius** property rounds the edges of the box and the **border** property, which is set to none, removes the border. 
+
+To style the checkbox, we type the following code in our **style.css** file:
+
+    .form-checkbox-input {
+        margin-right: 10px;
+        color: white;
+    }
+
+With this code, we create space between the checkbox and the text. and we change the color of the text to white.
+
+Now we have to style the button. We'll give the button an id of button. 
+
+    <body>
+        <div>
+            <div id="container">
+                <h1 id="heading"><i id="logo" class="fa fa-spotify logo" aria-hidden="true"></i> Spotify</h1>
+                <p><span class="subheading">Sign In</span><span class="subheading">Sign Up</span></p>
+                <form id="login-form">
+                    <input class="form-text-input" type="text"><br>
+                    <input class="form-text-input" type="text"><br> 
+                    <label class="form-checkbox-input"><input class="form-checkbox-input" type="checkbox" name="checkbox" id="checkbox">stay signed in</label>
+                </form>
+                <button id="button">SIGN IN</button>
+                <p>Forgot Password?</p>
+            </div>
+        </div>
+            
+    </body>
+
+Once we have assigned the id, we can style the button in our **style.css** file. To do that, we type the following code in our **style.css** file:
+
+    #button {
+        width: 75%;
+        margin-bottom: 20px;
+        height: 45px;
+        font-size: 20px;
+        border-radius: 50px;
+        border: none;
+        color: white;
+        background-color:mediumseagreen;
+    }
+
+As with the inputs, the **width** property adjusts the width, the **height** property adjusts the height, **font-size** the size of the font, **margin** the space around the button, **border:none** removes the border, **color** adjusts the color of the text and **background-color** changes the colour of the button.
+
+Finally we move on to the last paragraph. We give this paragraph a **id** of footer. 
+
+    <body>
+        <div>
+            <div id="container">
+                <h1 id="heading"><i id="logo" class="fa fa-spotify logo" aria-hidden="true"></i> Spotify</h1>
+                <p><span class="subheading">Sign In</span><span class="subheading">Sign Up</span></p>
+                <form id="login-form">
+                    <input class="form-text-input" type="text"><br>
+                    <input class="form-text-input" type="text"><br> 
+                    <label class="form-checkbox-input"><input class="form-checkbox-input" type="checkbox" name="checkbox" id="checkbox">stay signed in</label>
+                </form>
+                <button id="button">SIGN IN</button>
+                <p id="footer">Forgot Password?</p>
+            </div>
+        </div>
+            
+    </body>
+
+Once the **id** is assigned, we can type the following code in our **style.css** file in order to style the paragraph.
+
+    #footer {
+        font-weight: bold;
+        color: white;
+    }
+
+This code changes the text to bold and the colour of the text to white.
+
+At this stage our form looks like this:
+
+![](/content/images/Screenshot from 2020-03-28 17-18-29.png)  
+As you will see, there is still some things to do. In tomorrow's lesson we'll do the finishing touches and our form will be done!
+
+Enjoy!
