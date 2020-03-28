@@ -5,7 +5,7 @@ title: Let's make our form look pretty
 author: Reynardt Deminey
 
 ---
-Today it's time to put some make up on our login form and make it look like our example. Let's quickly just refresh our memory on how our login form has to to look. 
+Today it's time to put some make up on our login form and make it look like our example. Let's quickly just refresh our memory on how our login form has to to look.
 
 ![](/content/images/spotify-2.png)
 
@@ -19,7 +19,7 @@ To do this, we will use the **link** tag (Yes, another type of tag). In our case
 
 The **rel** attribute indicates what type of file we are linking to and the **href** attribute indicates the name and path of the file we are linking to. Because our files are in the same folder, we just specify the file name. If we add this to the **head** of our file, our code now looks like this:
 
-![](/content/images/Screenshot from 2020-03-28 13-51-07-1.png) 
+![](/content/images/Screenshot from 2020-03-28 13-51-07-1.png)
 
 Once the files are linked, we can continue with the styling of our page. If we look at the example, we see that the page has a background image which fills the whole page. To to this, we write the following code in our **style.css** file:
 
@@ -31,16 +31,16 @@ Once the files are linked, we can continue with the styling of our page. If we l
 
 Firstly, we type html. In a CSS file, this means we are selecting the whole page. In our case that is what we want, because the background image has to fill the whole page.
 
-The code that follows the selector are enclosed in curly braces. Inside the curly braces we make use of properties and values. For example, with regard to background size, **background-size** is the property and **cover** is the value. We will work with this a lot more in the days to come, so you will get the hang of it. 
+The code that follows the selector are enclosed in curly braces. Inside the curly braces we make use of properties and values. For example, with regard to background size, **background-size** is the property and **cover** is the value. We will work with this a lot more in the days to come, so you will get the hang of it.
 
 The first property we use is **background**. You can use a file on your pc as value or, in our case, we will use a file we link to online. I always say that you have to type the code yourself, but in this case you can copy and paste the code for the **background** into your file.
 
 We then use the **background-size** property with a value of **cover** to fill the page with the background image. Lastly, we use **overflow : hidden** to specify that the page should not allow scrolling when the image is bigger than the screen.
 
-If our files are linked and the above code is entered into our css file and saved our page now looks like this. 
+If our files are linked and the above code is entered into our css file and saved our page now looks like this.
 
 ![](/content/images/Screenshot from 2020-03-28 14-33-14.png)  
-Not exactly what we are looking for so let's change that. As we can see from the example, the background has a colour overlay. To place a colour overlay over the image, we will select the body of the HTML document. Once again, we just use body, with the properties and values between the curly braces. 
+Not exactly what we are looking for so let's change that. As we can see from the example, the background has a colour overlay. To place a colour overlay over the image, we will select the body of the HTML document. Once again, we just use body, with the properties and values between the curly braces.
 
     body {
         background: rgba(112, 112, 128, 0.88);
@@ -142,6 +142,68 @@ To center the contents and add a background a colour we add the following code:
 
 Our page should now look like this:
 
-![](/content/images/Screenshot from 2020-03-28 15-27-53.png)
+![](/content/images/Screenshot from 2020-03-28 15-27-53.png)  
+It's getting closer. The container should move down a bit and not be on the top edge of the page. Can you guess which property we will use to move the container down? Yes, padding. To do this we add the following to the styling of our **body** styling.
 
- 
+    body {
+        background: rgba(112, 112, 128, 0.88);
+        height: 100vh;
+        padding: 8%;   /* Added padding */ 
+    }
+
+If we save and refresh, our page will now look like this:
+
+![](/content/images/Screenshot from 2020-03-28 15-34-02.png)
+
+Now let's style the contents of the container. If we look at the heading we notice, that its quite a large and different font. To change the font, we once again go to our **body** styling and add the following:
+
+     body {
+        background: rgba(112, 112, 128, 0.88);
+        height: 100vh;
+        padding: 8%;    
+        font-family: 'Montserrat', sans-serif; /* Change the Font */
+    }
+
+If you save and refresh now, you'll notice that the font has changed. Before we can use the **Montserrat** font we really want, we have to import it. We do this by adding another **link** tag in our **head** tag. The link tag is the following:
+
+     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+
+You'll notice that this time, instead of a file on our machine, we are linking to an external resource (Google Fonts). Every time our page loads it will fetch the font data from the Google Fonts and use it on our form. You can go ahead and copy the above **link** tag to the **head** of your HTML file. Your code should now look like this:
+
+![](/content/images/Screenshot from 2020-03-28 15-43-02.png)  
+If you now save and refresh the page, you'll notice the font change again. Although not the exact same font as in the example, it is close. 
+
+Now for the heading. We have the logo and the Spotify text. To enter the logo we will once again be using an external resource. Exactly like the css file and the Google Fonts link we will paste the **link** tag into the **head** of our **index.html** file.
+
+You can go ahead and past this **link** into the **head** of your **index.html** file.
+
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+Your code should now look like this:
+
+![](/content/images/Screenshot from 2020-03-28 15-53-40.png)
+
+Now we should get the logo. In the **h1** tag, just before the word **Spotify**, type the following code:
+
+    <i class="fa fa-spotify" aria-hidden="true"></i>
+
+Your code between the **body** tags should now look like this:
+
+    <body>
+        <div>
+            <div id="container">
+                <h1><i class="fa fa-spotify" aria-hidden="true"></i> Spotify</h1>
+                <p><span>Sign In</span><span>Sign Up</span></p>
+                <form>
+                    <input type="text"><br>
+                    <input type="text"><br> 
+                    <label><input type="checkbox" name="checkbox" id="checkbox">stay signed in</label>
+                </form>
+                <button>SIGN IN</button>
+                <p>Forgot Password?</p>
+            </div>
+        </div>
+            
+    </body>
+
+If you save and refresh now, you'll see the Spotify logo in your heading like this:
