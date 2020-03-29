@@ -134,3 +134,19 @@ The margin-top property, moves the checkbox down a bit farther away from the tex
 Look for where the button was selected in the **style.css** file and add the following code.
 
     box-shadow: 0px 7px 12px black;
+
+With this code we create a box shadow. The box-shadow is create by a few different number, which are all in pixels. The first is the offset on the **x-axis**. In other words this number determine how far the shadow moves to the left or right. We make this zero, bacause we don't want the shadow to be to the left or the right. The second number is the offset on the **y-axis**. In other words this number determines how far the shadow will extend behind the button. We make this number **7px** to extend the shadow to the back of the button. The third number is the **blur radius**, in other words how far the blur effect should extend. In our case, a blur radius of **12px** looks about right. Finally, and as before, the **rgb** code is the colour code for the colour we used for the **box-shadow**.
+
+Our Login form now looks like this:
+
+![](/content/images/Screenshot from 2020-03-29 13-29-07.png)  
+In respect of the text at the bottom, they only thing I will do is change the colour. We made this a paragraph, whereas it should be a link, but seeing as we have nowhere to link to, we will keep it a paragraph. We will use the links in the next project. To change the colour we go to where the **footer** is selected in the **style.css** file and we change the code as follows:
+
+    color: lightgrey;
+
+The code where the footer is styled should now look like this:
+
+    #footer {
+        font-weight: bold;
+        color: lightgrey;
+    }
