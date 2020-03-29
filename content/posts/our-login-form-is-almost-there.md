@@ -13,7 +13,7 @@ Just to see where we are and what is still needed, let's just look at the exampl
 
 ![](/content/images/spotify.png)
 
-Now we can clearly see what is still needed. 
+Now we can clearly see what is still needed.
 
 It looks like our logo and heading needs more work. The logo should be bigger and it should be the same colour as the button. So, let's get to it. Remember, yesterday we added an **id** of logo to our **i** tag in our heading. Let's go to our CSS file and style the logo. From the example it looks like the logo is almost double the size of the text, so we would type the following code in our **style.css** file.
 
@@ -70,7 +70,7 @@ With this code, we once again select the subheading as before, but the **:hover*
 
 ![](/content/images/Screenshot from 2020-03-29 12-34-14.png)
 
-Similarly, when you hover the cursor over the Sign Up text, it does the same. Perfect! 
+Similarly, when you hover the cursor over the Sign Up text, it does the same. Perfect!
 
 Now let's move on to the text inputs. From the example we see that they are already filled with text and if we type in our inputs the fonts are larger and a different colour. Let's change that quickly. Firstly, in our HTML file, we add the following to code to each input (Just the text inputs).
 
@@ -132,3 +132,5 @@ That looks about right. Now if we move on to the checkbox, we see that it's blue
 The margin-top property, moves the checkbox down a bit farther away from the text inputs. Now let's move to our button. The button looks great, but you'll notice that there is a slight shadow behind the button. To create that shadow, we'll use what we call the **box-shadow**.
 
 Look for where the button was selected in the **style.css** file and add the following code.
+
+    box-shadow: 0px 7px 12px black;
