@@ -150,3 +150,31 @@ The code where the footer is styled should now look like this:
         font-weight: bold;
         color: lightgrey;
     }
+
+To end of our form, we just have to round the corners of the form container and add a box shadow. To do this, look for where we selected the **container** in our **style.css** file and add the following code:
+
+    border-radius: 12px;
+    box-shadow: 0px 5px 16px rgb(52, 53, 54);
+
+Our styling for our container should look like this:
+
+    #container {
+        width: 30%;
+        margin: auto;
+        background-color: rgb(46,47,51);
+        text-align: center;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        border-radius: 12px;
+        box-shadow: 0px 5px 16px rgb(52, 53, 54);
+    }
+
+The **border-radius** property gives the corners of the **container** a rounded appearance. As with the button, the **box-shadow** property creates a shadow behind the form. 
+
+Our completed form looks like this:
+
+![](/content/images/Screenshot from 2020-03-29 13-42-42.png)
+
+That's it! Our form is done. I'm looking forward to the next lesson.
+
+Till later!
