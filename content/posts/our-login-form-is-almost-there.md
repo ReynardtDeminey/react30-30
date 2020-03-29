@@ -178,3 +178,63 @@ Our completed form looks like this:
 That's it! Our form is done. I'm looking forward to the next lesson.
 
 Till later!
+
+### BONUS:
+
+I've added some Javascript to our login form. This part is completely optional and I won't explain much. We will get to work with Javascript later on.
+
+If we look at our form, we see that if we hover over the Sign In and Sign Up text, the green line shows under it. In reality what happens on a real website is that you click on one of those two to select your option.
+
+Naturally if you click the form should change. Normally a sign up form has another text box where you have to confirm your password. The text of the sign up button should also change. Let's make those changes.
+
+In the span tag which houses the **Sign Up** text, make the following changes:
+
+    <span onclick="SignUpButton()" class="subheading">Sign Up</span>
+
+With this code we add a Javascript function to our code which will be called when the button is clicked. We will write the function later.
+
+On the other span, which houses the **Sign In** text, make the following changes:
+
+    <span onclick="SignInButton()" class="subheading">Sign In</span>
+
+Here we add another function which will be called when this is clicked.
+
+Lastly, add the following input just **below** your last **text** input and **before** the checkbox input.
+
+Just before the closing **body** tag in your HTML file, add the following code:
+
+    <script src="script.js"></script>
+
+This code will connect the HTML file with the script.js file which contains our Javascript code.
+
+Now, as in the first part of our Login form lesson, next to the fodler name in the VSCode file explorer, click the add file button. As an alternative, right click in the file explorer in VSCode and select **New File**. Name that file **script.js**, press enter and the file will be opened in the code editor. 
+
+As I said, we will be creating a function when the text is clicked. In the **script.js** file, type the following:
+
+    function SignUpButton(){
+        let x = document.getElementById("sign-up");
+        let button = document.getElementById("button")
+        if (x.style.display === "none"){
+            x.style.display = "block"
+        }
+        button.innerHTML = "SIGN UP"    
+    }
+
+This function will make the extra text box render to the screen and change the text of the button. I will explain later on in further lessons exactly how the function works.
+
+Similarly, when the other text is clicked we have to remove the extra text input and change the text of the button back to the original text. For this we use the following function:
+
+    function SignInButton(){
+        let x = document.getElementById("sign-up");
+        let button = document.getElementById("button")
+        if (x.style.display === "block"){
+            x.style.display = "none"
+        }    
+        button.innerHTML = "SIGN IN"
+    }
+
+If we save all our files now and refresh our browser, we will see that the form changes as we click on either **Sign In** or **Sign Up**.
+
+Our form is now really done.
+
+I hope you are looking forward to the next lesson.
