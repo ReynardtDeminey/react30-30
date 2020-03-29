@@ -169,7 +169,7 @@ Our styling for our container should look like this:
         box-shadow: 0px 5px 16px rgb(52, 53, 54);
     }
 
-The **border-radius** property gives the corners of the **container** a rounded appearance. As with the button, the **box-shadow** property creates a shadow behind the form. 
+The **border-radius** property gives the corners of the **container** a rounded appearance. As with the button, the **box-shadow** property creates a shadow behind the form.
 
 Our completed form looks like this:
 
@@ -201,13 +201,15 @@ Here we add another function which will be called when this is clicked.
 
 Lastly, add the following input just **below** your last **text** input and **before** the checkbox input.
 
+    <input style="display: none; margin-left: 12%;" id="sign-up" class="form-text-input" type="text" placeholder="Confirm Password"><br>
+
 Just before the closing **body** tag in your HTML file, add the following code:
 
     <script src="script.js"></script>
 
 This code will connect the HTML file with the script.js file which contains our Javascript code.
 
-Now, as in the first part of our Login form lesson, next to the fodler name in the VSCode file explorer, click the add file button. As an alternative, right click in the file explorer in VSCode and select **New File**. Name that file **script.js**, press enter and the file will be opened in the code editor. 
+Now, as in the first part of our Login form lesson, next to the fodler name in the VSCode file explorer, click the add file button. As an alternative, right click in the file explorer in VSCode and select **New File**. Name that file **script.js**, press enter and the file will be opened in the code editor.
 
 As I said, we will be creating a function when the text is clicked. In the **script.js** file, type the following:
 
