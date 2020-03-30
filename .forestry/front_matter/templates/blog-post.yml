@@ -36,4 +36,7 @@ fields:
   description: Enter hero image for blog post here
   default: "/content/images/sarah-dorweiler-9Z1KRIfpBTM-unsplash.jpg"
 pages:
-- content/posts/hello-world.md
+- content/posts/let-s-get-coding.md
+- content/posts/let-s-make-our-form-look-pretty.md
+- content/posts/let-s-set-up-our-workspace.md
+- content/posts/our-login-form-is-almost-there.md
